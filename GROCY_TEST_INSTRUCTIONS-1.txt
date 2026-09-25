@@ -1,0 +1,38 @@
+GROCY ONE-RECIPE IMPORT TEST
+
+WHAT THIS DOES
+- Connects to your Grocy demo through the official REST API.
+- Reads your existing products, quantity units and recipes.
+- Checks that the products needed for the test already exist.
+- In DRY RUN mode it changes absolutely nothing.
+- When DRY_RUN is changed to False, it creates one recipe and links each
+  ingredient to an existing Grocy inventory product.
+
+HOW TO RUN ON WINDOWS
+1. Revoke the API key you pasted into ChatGPT and create a fresh temporary one.
+2. Download grocy_one_recipe_test.py.
+3. Right-click it > Edit with Notepad (or open it in VS Code).
+4. Replace:
+      API_KEY = "PASTE_A_FRESH_TEMP_API_KEY_HERE"
+   with your fresh key.
+5. Leave:
+      DRY_RUN = True
+6. Save.
+7. Open Command Prompt in the folder containing the file.
+8. Run:
+      py grocy_one_recipe_test.py
+   If "py" is unavailable, try:
+      python grocy_one_recipe_test.py
+9. Send the output back to ChatGPT.
+10. Only after the dry run passes should DRY_RUN be changed to False.
+
+NOTE
+The initial recipe is deliberately tiny. Once the connection/master-data
+check passes, we can replace it with one actual Recipe Keeper recipe and
+test Grocy's stock/recipe behaviour properly.
+
+IMPORTANT
+The script uses the Grocy demo URL below:
+https://test-9kwvh5llgqigdinx3k553d.demo.grocy.info
+
+Use the root URL only for the API, not a page URL like /mealplan.
