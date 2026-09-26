@@ -16,7 +16,7 @@ import urllib.error
 # ============================================================
 
 BASE_URL = "https://test-9kwvh5llgqigdinx3k553d.demo.grocy.info"
-API_KEY = "PASTE_A_FRESH_TEMP_API_KEY_HERE"
+API_KEY = "e55b62fbee59f4c37cb7fce8d2f659427de6514e79f1f3cd"
 DRY_RUN = True
 
 # Replace this with the recipe we choose after the connection test.
